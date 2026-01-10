@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+
+using EmployeeDemo.APIs.Entities;
+using EmpolyeeManagement.DTOs.Employee;
 
 namespace EmployeeManagementApp.Services
 {
-    internal class IEmployeeService
+    public interface  IEmployeeService
     {
+        Task<List<EmployeeResponseDto>> GetAllEmployeeAsync();
+        
     }
-}
+} 

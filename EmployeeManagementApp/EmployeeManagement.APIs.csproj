@@ -17,11 +17,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\EmployeeManagement.Services\EmployeeManagement.Services.csproj" />
+    <ProjectReference Include="..\EmpolyeeManagement.DTOs\EmpolyeeManagement.DTOs.csproj" />
     <ProjectReference Include="..\EmpolyeeManagement.Entities\EmpolyeeManagement.Entities.csproj" />
   </ItemGroup>
 

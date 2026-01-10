@@ -1,5 +1,6 @@
 using EmployeeManagementApp.Repos;
 using EmployeeManagementApp.Repos.Data;
+using EmployeeManagementApp.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -25,8 +26,8 @@ builder.Services.AddDbContext<EmployeeDbContext>(options =>
     ));
 
 
-//builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
-
+builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 
 
 

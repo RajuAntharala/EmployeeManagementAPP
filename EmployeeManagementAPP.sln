@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36811.4 d17.14
+VisualStudioVersion = 17.14.36811.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagement.APIs", "EmployeeManagementApp\EmployeeManagement.APIs.csproj", "{2EF70C45-8AA1-4883-9519-18CAC7D9DE95}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagement.Services", "EmployeeManagement.Services\EmployeeManagement.Services.csproj", "{41A71608-B1D2-4E74-A852-3B347B5DBD60}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmpolyeeManagement.Entities", "EmpolyeeManagement.Entities\EmpolyeeManagement.Entities.csproj", "{E76C290E-2E0D-4595-A344-5D2A2A04B0DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmpolyeeManagement.DTOs", "EmpolyeeManagement.DTOs\EmpolyeeManagement.DTOs.csproj", "{A16AA959-7EEE-4BC3-826E-3DF9E0AEE07A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{E76C290E-2E0D-4595-A344-5D2A2A04B0DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E76C290E-2E0D-4595-A344-5D2A2A04B0DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E76C290E-2E0D-4595-A344-5D2A2A04B0DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A16AA959-7EEE-4BC3-826E-3DF9E0AEE07A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A16AA959-7EEE-4BC3-826E-3DF9E0AEE07A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A16AA959-7EEE-4BC3-826E-3DF9E0AEE07A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A16AA959-7EEE-4BC3-826E-3DF9E0AEE07A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

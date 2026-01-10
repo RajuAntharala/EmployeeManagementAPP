@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EmployeeMangement.Repos\EmployeeMangement.Repos.csproj" />
+    <ProjectReference Include="..\EmpolyeeManagement.DTOs\EmpolyeeManagement.DTOs.csproj" />
     <ProjectReference Include="..\EmpolyeeManagement.Entities\EmpolyeeManagement.Entities.csproj" />
   </ItemGroup>
 
