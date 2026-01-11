@@ -4,8 +4,8 @@ namespace EmpolyeeManagement.DTOs.Employee
 {
     public class EmployeeCreateDto
     {
-        public string Name { get; set; }
-        public string Email { get; set; }
-        public string Position { get; set; }
+        public string EmployeeName { get; set; }
+        public string EmployeeEmail { get; set; }
+        public string EmployeePosition { get; set; }
     }
 }
