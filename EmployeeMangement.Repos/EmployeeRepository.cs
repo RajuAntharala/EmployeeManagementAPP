@@ -1,6 +1,6 @@
 ﻿using EmployeeDemo.APIs.Entities;
 using EmployeeManagementApp.Repos.Data;
-using EmpolyeeManagement.DTOs.Employee;
+
 using Microsoft.EntityFrameworkCore;
 
 namespace EmployeeManagementApp.Repos
