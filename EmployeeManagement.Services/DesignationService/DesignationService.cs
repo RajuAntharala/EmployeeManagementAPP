@@ -17,26 +17,50 @@ namespace EmployeeManagement.Services.DesignationService
         {
             _designationRepository = designationRepository;
         }
-        public async Task<DesignationResponceDto> CreateDesignationAsync(DesignationResponceDto createdto)
+
+        public async Task<DesignationResponceDto> CreateDesignationAsync(DesignationCreateDto createDto)
         {
+
             var designationEntity = new Designation();
+            designationEntity.DesignationId = createDto.DesignationId;
+            designationEntity.Title = createDto.Title;
+            designationEntity.Level = createDto.Level;
 
-            designationEntity.DesignationId = createdto.DesignationId;
-            designationEntity.Title = createdto.Title;
-            designationEntity.Level = createdto.Level;
             await _designationRepository.CreateDesignationAsync(designationEntity);
-            var dto = new DesignationResponceDto
-            {
 
-                DesignationId = createdto.DesignationId,
-                Title = createdto.Title,
-                Level = createdto.Level,
+            var dtos = new DesignationResponceDto
+            {
+                DesignationId = createDto.DesignationId,
+                Title = createDto.Title,
+                Level = createDto.Level,
 
             };
-            return dto;
+            return dtos;
+           
 
            // throw new NotImplementedException();
         }
+
+        //public async Task<DesignationResponceDto> CreateDesignationAsync(DesignationResponceDto createdto)
+        //{
+        //    var designationEntity = new Designation();
+
+        //    designationEntity.DesignationId = createdto.DesignationId;
+        //    designationEntity.Title = createdto.Title;
+        //    designationEntity.Level = createdto.Level;
+        //    await _designationRepository.CreateDesignationAsync(designationEntity);
+        //    var dto = new DesignationResponceDto
+        //    {
+
+        //        DesignationId = createdto.DesignationId,
+        //        Title = createdto.Title,
+        //        Level = createdto.Level,
+
+        //    };
+        //    return dto;
+
+        //   // throw new NotImplementedException();
+        //}
         public async Task<bool> DeleteDesignationAsync(int id)
         {
             var DesignationEntity = _designationRepository.GetDesignationsByIdAsync(id);
@@ -48,7 +72,12 @@ namespace EmployeeManagement.Services.DesignationService
             return true;
             // throw new NotImplementedException();
         }
-       
+
+        public Task<bool> DeleteDesignationAsync(int id, DesignationCreateDto createDto)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<List<DesignationResponceDto>> GetAllDesignationsAsync()
         {
             var DesignationData = await _designationRepository.GetAllDesignationsAsync();

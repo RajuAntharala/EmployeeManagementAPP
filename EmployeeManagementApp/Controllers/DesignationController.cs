@@ -33,12 +33,33 @@ namespace EmployeeManagement.APIs.Controllers
         }
 
 
+
         [HttpPost("CreateDesigantion")]
-        // endpoint : https://localhost:7189/api/Designation/CreateDesigantion
-        public async Task<IActionResult> CreateDesigantion([FromBody] DesignationCreateDto createDto)
+       // endpoint : https://localhost:7189/api/Designation/CreateDesigantion
+       public async Task<IActionResult> CreatDesignation([FromBody] DesignationCreateDto createDto)
         {
             var result = await _designationService.CreateDesignationAsync(createDto);
             return result is null ? NotFound() : Ok(result);
+        }
+
+        [HttpPut("UpdateDesignation/{id}")]
+
+        //endpoint : https://localhost:7189/api/Designation/UpdateDesignation/2
+
+        public async Task<IActionResult> UpdateDesignation(int id,[FromBody]DesignationUpdateDto updateDto)
+        {
+            var UpdateDesignation = await _designationService.UpdateDesignationAsync(id, updateDto);
+            return UpdateDesignation is false ? NotFound() : Ok(UpdateDesignation);
+        }
+
+
+        [HttpDelete("DeleteDesignation/{id}")]
+        //  https://localhost:7189/api/Designation/DeleteDesignation/2
+
+        public async Task<IActionResult> DeleteDesignation(int id)
+        {
+            var isDeleted = await _designationService.DeleteDesignationAsync(id);
+            return isDeleted is false ? NotFound() : Ok(isDeleted);
         }
 
 

@@ -10,12 +10,11 @@ namespace EmployeeManagement.Services.DesignationService
         Task<List<DesignationResponceDto>> GetAllDesignationsAsync();
         Task<DesignationResponceDto1> GetDesignationByIdAsync(int id);
 
-        Task<DesignationResponceDto> CreateDesignationAsync(DesignationResponceDto designation);
+        Task<DesignationResponceDto> CreateDesignationAsync(DesignationCreateDto createDto);
 
         Task<bool> UpdateDesignationAsync(int id, DesignationUpdateDto updateDto);
 
         Task<bool> DeleteDesignationAsync(int id);
-
-
+        //Task CreateDesignationAsync(DesignationCreateDto createDto);
     }
 }
